@@ -9,7 +9,7 @@ Installation:
 5. pip install django-filter
 6.  python manage.py startapp authors
 
-making:
+Making:
 1. add app to settings.py
    1. rest_framework
    2. authors
@@ -27,5 +27,18 @@ making:
 Installation:
 1. download mode.js from https://nodejs.org/en/ (but the best variant to install from UbuntuSoftware)
 2. npx create-react-app frontend
-3. in new terminal window change dir to frontend
+3. in new terminal window change dir to frontend (~$ cd frontend)
 4. run React as ~/Projects/GeekBrains/DRF/frontend$ npm start
+5. npm install axios
+6. pip install django-cors-headers
+7. add info to settings.py:
+   1. INSTALLED_APPS + 'corsheaders'
+   2. MIDDLEWARE + 'corsheaders.middleware.CorsMiddleware'
+   3. CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+    'http://127.0.0.1:3000',
+    ]
+
+
+Making:
+1. Write js code
