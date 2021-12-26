@@ -1,18 +1,40 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import AuthorList from './components/Author';
 
-class App extends Component {
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      'authors': []
+    }
+  }
+
+  componentDidMount() {
+    const authors = [
+      {
+        'first_name': 'Владимир',
+        'last_name': 'Буковский',
+        'birthday_year': 1942,
+      },
+      {
+        'first_name': 'Владимир',
+        'last_name': 'Набоков',
+        'birthday_year': 1899,
+      }
+    ]
+    this.setState(
+      {
+        'authors': authors
+      }
+    )
+  }
+
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <AuthorList authors={this.state.authors}/>
       </div>
     );
   }
