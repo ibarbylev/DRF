@@ -39,6 +39,8 @@ Installation:
     'http://127.0.0.1:3000',
     ]
 
-
 Making:
 1. Write js code
+
+## Lesson 3
+
