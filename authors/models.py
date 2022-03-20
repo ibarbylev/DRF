@@ -6,3 +6,7 @@ class Author(models.Model):
     last_name = models.CharField(max_length=64)
     birthday_year = models.PositiveIntegerField()
 
+
+class Book(models.Model):
+    authors = models.ManyToManyField(Author)
+    title = models.CharField(max_length=255)
