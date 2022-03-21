@@ -1,0 +1,24 @@
+    {
+        "id": 2,
+        "authors": [
+            {
+                "id": 1,
+                "first_name": "Ivan",
+                "last_name": "Bunin",
+                "birthday_year": 1870
+            },
+            {
+                "id": 3,
+                "first_name": "Viktor",
+                "last_name": "Pelevin",
+                "birthday_year": 1962
+            },
+            {
+                "id": 2,
+                "first_name": "Viktor",
+                "last_name": "Suvorov",
+                "birthday_year": 1947
+            }
+        ],
+        "title": "New book"
+    }
