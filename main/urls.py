@@ -2,11 +2,11 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 
-from authors.views import AuthorModelViewSet, BookModelViewSet
+from authors.views import KidModelViewSet, SleepModelViewSet
 
 router = DefaultRouter()
-router.register('authors', AuthorModelViewSet)
-router.register('books', BookModelViewSet)
+router.register('authors', KidModelViewSet)
+router.register('books', SleepModelViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

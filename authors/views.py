@@ -1,13 +1,13 @@
 from rest_framework.viewsets import ModelViewSet
-from .models import Author, Book
-from .serializers import AuthorModelSerializer, BookModelSerializer
+from .models import Kid, Sleep
+from .serializers import KidModelSerializer, SleepModelSerializer
 
 
-class AuthorModelViewSet(ModelViewSet):
-    queryset = Author.objects.all()
-    serializer_class = AuthorModelSerializer
+class KidModelViewSet(ModelViewSet):
+    queryset = Kid.objects.all()
+    serializer_class = KidModelSerializer
 
 
-class BookModelViewSet(ModelViewSet):
-    queryset = Book.objects.all()
-    serializer_class = BookModelSerializer
+class SleepModelViewSet(ModelViewSet):
+    queryset = Sleep.objects.all()
+    serializer_class = SleepModelSerializer

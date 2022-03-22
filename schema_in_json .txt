@@ -2,9 +2,9 @@
     "sleeps": [
         {
             "sleepId": 1,
-            "finishTime": "2022-03-22T13:13:29+01:00",
-            "startRoutineTimeLabel": "1:13 PM",
-            "toGetAsleepLength": 0,
+            "finishTime": "2022-03-22T13:13:29+01:00",              # время окончания сна
+            "startRoutineTimeLabel": "1:13 PM",                     # начало ритуала укладывания (str)
+            "toGetAsleepLength": 0,                                 # вычисляемое поле от начала засыпания до засыпания
             "segments": [
                 {
                     "lengthHM": "0h 0m",
@@ -13,15 +13,15 @@
                     "start": "2022-03-22T13:13:28+01:00"
                 }
             ],
-            "startFallingAsleepTime": "2022-03-22T13:13:28+01:00",
-            "isItNightSleep": false,
-            "finishTimeLabel": "1:13 PM",
-            "sleepingTimeLabel": "0h 0m",
-            "startRoutineTime": "2022-03-22T13:13:27+01:00",
-            "sleepingTime": 0,
-            "dateLabel": "Tue, March 22",
-            "routineLength": 0,
-            "sleepPeriodLength": 1
+            "startFallingAsleepTime": "2022-03-22T13:13:28+01:00",  # начало засыпания
+            "isItNightSleep": false,                                # false - ночной сон, true - дневной
+            "finishTimeLabel": "1:13 PM",                           # время окончания сна (str)
+            "sleepingTimeLabel": "0h 0m",                           # продолжительность сна (str)
+            "startRoutineTime": "2022-03-22T13:13:27+01:00",        # начало ритуала укладывания
+            "sleepingTime": 0,                                      # время сна (вычисляемое в секундах)
+            "dateLabel": "Tue, March 22",                           # дата сна (str)
+            "routineLength": 0,                                     # продолжительность ритуала (sec)
+            "sleepPeriodLength": 1                                  # удаляем это поле!!!
         },
         {
             "sleepId": 2,
@@ -122,9 +122,9 @@
             "sleepPeriodLength": 7200
         }
     ],
-    "scheduleSetIndex": 0,
-    "age": 4,
-    "plan": {
+    "scheduleSetIndex": 0,     # id расписания, назначенного этому ребёнку
+    "age": 4,                  # возраст в месяцах (не учитывать!!!)
+    "plan": {                  # план (не учитывать!!!)
         "ageMax": 4,
         "dayMin": 10800,
         "dayMax": 18000,
@@ -143,9 +143,9 @@
             5400
         ]
     },
-    "birthdate": "2021-11-09T13:00:00+01:00",
-    "createdAt": "2022-03-22T13:00:54+01:00",
-    "reviewRequests": [
+    "birthdate": "2021-11-09T13:00:00+01:00",   # дата рождения
+    "createdAt": "2022-03-22T13:00:54+01:00",   # дата создания аккаунта
+    "reviewRequests": [                         # (не учитывать)
         "2022-03-22T13:15:05+01:00"
     ]
 }

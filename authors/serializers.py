@@ -1,19 +1,19 @@
 from rest_framework import serializers
 
-from .models import Author, Book
+from .models import Kid, Sleep
 
 
-class AuthorModelSerializer(serializers.ModelSerializer):
+class KidModelSerializer(serializers.ModelSerializer):
     first_name = serializers.CharField(max_length=255)
     last_name = serializers.CharField(max_length=255)
     birthday_year = serializers.IntegerField()
 
     class Meta:
-        model = Author
+        model = Kid
         fields = '__all__'
 
     def create(self, validated_data):
-        return Author.objects.create(**validated_data)
+        return Kid.objects.create(**validated_data)
 
     def update(self, instance, validated_data):
         instance.email = validated_data.get('first_name', instance.first_name)
@@ -23,10 +23,10 @@ class AuthorModelSerializer(serializers.ModelSerializer):
         return instance
 
 
-class BookModelSerializer(serializers.ModelSerializer):
-    authors = AuthorModelSerializer(many=True)
-    title = serializers.CharField(max_length=255)
+class SleepModelSerializer(serializers.ModelSerializer):
+    authors = KidModelSerializer(many=True)
+    date = serializers.DateTimeField()
 
     class Meta:
-        model = Book
+        model = Sleep
         fields = '__all__'
